@@ -23,6 +23,7 @@
 - name: Ensure MySQL is stopped after initial install.
   service: "name={{ mysql_daemon }} state=stopped"
   when: not mysql_installed.stat.exists
+  ignore_errors: "{{ ansible_check_mode }}"
 
 - name: Delete innodb log files created by apt package after initial install.
   file: path={{ mysql_datadir }}/{{ item }} state=absent
