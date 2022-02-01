@@ -4,7 +4,7 @@ __mysql_packages:
   - default-mysql-server
 mysql_log_file_group: adm
 __mysql_slow_query_log_file: /var/log/mysql/mysql-slow.log
-__mysql_log_error: /var/log/mysql/mysql.log
+__mysql_log_error: /var/log/mysql/error.log
 __mysql_syslog_tag: mariadb
 __mysql_pid_file: /run/mysqld/mysqld.pid
 __mysql_config_file: /etc/mysql/my.cnf
